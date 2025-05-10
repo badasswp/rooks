@@ -6,8 +6,8 @@ import { useEffect, useRef } from 'react';
  * This hook is used to track the previous
  * value of a given input.
  *
- * @param value - The value to be tracked
- * @returns The previous value of the input
+ * @param value - The value to be tracked.
+ * @returns The previous value of the input.
  */
 
 const usePrevious = <T,>(value: T): T | undefined => {
