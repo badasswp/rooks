@@ -9,7 +9,7 @@ import React, { JSX } from 'react';
 import useToggle from './';
 
 interface ToggleProps {
-	isChecked: boolean;
+  isChecked: boolean;
 }
 
 /**
@@ -26,7 +26,7 @@ const Toggle = ({ isChecked }: ToggleProps): JSX.Element => {
 
   return (
     <div>
-			<p>Checked: {JSON.stringify(checked)}</p>
+      <p>Checked: {JSON.stringify(checked)}</p>
       <input type="checkbox" checked={checked} onChange={setChecked}/>
     </div>
   );
