@@ -1,9 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-interface UsePreviousProps {
-	value: string|number|boolean|null;
-}
-
 /**
  * usePrevious Hook.
  *
@@ -13,8 +9,9 @@ interface UsePreviousProps {
  * @param value - The value to be tracked
  * @returns The previous value of the input
  */
-const usePrevious = (value: UsePreviousProps): UsePreviousProps => {
-  const ref = useRef<UsePreviousProps>(null);
+
+const usePrevious = <T,>(value: T): T | undefined => {
+  const ref = useRef<T>(value);
 
   useEffect(() => {
     ref.current = value;
