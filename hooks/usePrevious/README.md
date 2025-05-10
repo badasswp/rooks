@@ -5,10 +5,18 @@ The `usePrevious` hook is a custom React hook that helps you track the previous 
 ## How To Use
 
 ```js
-import React, { useState } from 'react';
-import usePrevious from './usePrevious';
+import React, { useState, JSX } from 'react';
+import usePrevious from './';
 
-const Counter = () => {
+/**
+ * Previous component.
+ *
+ * This component is used to demonstrate
+ * the use of the usePrevious hook.
+ *
+ * @returns {JSX.Element} The Previous component.
+ */
+const Previous = (): JSX.Element => {
   const [count, setCount] = useState(0);
   const prevCount = usePrevious(count);
 
@@ -21,5 +29,5 @@ const Counter = () => {
   );
 }
 
-export default Counter;
+export default Previous;
 ```
