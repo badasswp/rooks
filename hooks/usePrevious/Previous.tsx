@@ -1,4 +1,5 @@
-import React, { useState, JSX } from 'react';
+import { useState } from 'react';
+import type { JSX } from 'react';
 import usePrevious from './';
 
 /**

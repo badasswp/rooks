@@ -1,4 +1,5 @@
-import React, { JSX } from 'react';
+import type { JSX } from 'react';
+
 import useToggle from './';
 
 interface ToggleProps {
