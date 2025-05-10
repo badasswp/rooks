@@ -17,7 +17,7 @@ const usePrevious = <T,>(value: T): T | undefined => {
     ref.current = value;
   }, [value]);
 
-  return ref.current ?? { value: '' };
+  return ref.current;
 }
 
 export default usePrevious;
