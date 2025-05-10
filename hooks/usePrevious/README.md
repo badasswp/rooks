@@ -6,7 +6,7 @@ The `usePrevious` hook is a custom React hook that helps you track the previous 
 
 ```js
 import React, { useState } from 'react';
-import { usePrevious } from './usePrevious';
+import usePrevious from './usePrevious';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
