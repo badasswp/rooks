@@ -10,10 +10,9 @@ type BlurType = [boolean, Ref<HTMLDivElement>];
  * This hook is used to track when the user
  * has clicked outside an element.
  *
- * @param {Function} onBlur The callback function to be run on blur.
  * @returns BlurType
  */
-const useBlur = (onBlur: () => void): BlurType => {
+const useBlur = (): BlurType => {
   const ref = useRef<HTMLDivElement>(null);
   const [isBlurred, setIsBlurred] = useState(false);
 
@@ -22,7 +21,6 @@ const useBlur = (onBlur: () => void): BlurType => {
       const el = ref.current;
       if (el && !el.contains(e.target as Node) && !isBlurred) {
         setIsBlurred(true);
-        setTimeout(onBlur, 150);
       }
     };
 
@@ -40,7 +38,7 @@ const useBlur = (onBlur: () => void): BlurType => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('focusin', handleFocusIn);
     };
-  }, [onBlur, isBlurred]);
+  }, [isBlurred]);
 
   return [isBlurred, ref];
 };

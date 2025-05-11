@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import type { JSX } from 'react';
 import useBlur from './';
 
@@ -10,16 +11,22 @@ import useBlur from './';
  * @returns {JSX.Element} The Blur component.
  */
 const Blur = (): JSX.Element => {
+  const [isBlurred, isBlurredRef] = useBlur();
+
   const handleBlur = () => {
     console.log('Blur event has been triggered');
   }
 
-  const [isBlurred, isBlurredRef] = useBlur(handleBlur);
+  useEffect(() => {
+    if (isBlurred) {
+      handleBlur();
+    }
+  })
 
   return (
     <>
-      <p>{JSON.stringify(isBlurred)}</p>
-      <div ref={isBlurredRef} style={{ height: 100, border: '1px solid #ccc' }} contentEditable/>
+      <p data-testid="status">{JSON.stringify(isBlurred)}</p>
+      <div data-testid="element" ref={isBlurredRef} style={{ height: 100, border: '1px solid #ccc' }} contentEditable/>
     </>
   );
 }

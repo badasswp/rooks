@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UseBlur /> should render the component with no issues 1`] = `
+<div>
+  <p
+    data-testid="status"
+  >
+    false
+  </p>
+  <div
+    contenteditable="true"
+    data-testid="element"
+    style="height: 100px; border: 1px solid #ccc;"
+  />
+</div>
+`;
