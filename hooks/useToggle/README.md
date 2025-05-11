@@ -9,7 +9,7 @@ import type { JSX } from 'react';
 import useToggle from './';
 
 interface ToggleProps {
-	isChecked: boolean;
+  isChecked: boolean;
 }
 
 /**
