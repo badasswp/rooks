@@ -16,8 +16,8 @@ const Previous = (): JSX.Element => {
 
   return (
     <div>
-      <p>Current: {count}</p>
-      <p>Previous: {prevCount}</p>
+      <p data-testid="current">Current: {count}</p>
+      <p data-testid="previous">Previous: {prevCount}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   );
