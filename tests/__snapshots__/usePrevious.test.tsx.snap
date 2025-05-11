@@ -1,31 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<UsePrevious /> should return a sanitized string 1`] = `
+exports[`<UsePrevious /> should render the component with no issues 1`] = `
 <div>
   <div>
-    <p>
+    <p
+      data-testid="current"
+    >
       Current: 
       0
     </p>
-    <p>
-      Previous: 
-      0
-    </p>
-    <button>
-      Increment
-    </button>
-  </div>
-</div>
-`;
-
-exports[`<UsePrevious /> should show the component with no rendering issues 1`] = `
-<div>
-  <div>
-    <p>
-      Current: 
-      0
-    </p>
-    <p>
+    <p
+      data-testid="previous"
+    >
       Previous: 
       0
     </p>
