@@ -21,9 +21,9 @@ const WindowSize = (): JSX.Element => {
 
   return (
     <div>
-			<p>Try to resize your Window</p>
-			<p data-testid="width">Your current Window width is {width}</p>
-			<p data-testid="height">Your current Window height is {height}</p>
+      <p>Try to resize your Window</p>
+      <p data-testid="width">Your current Window width is {width}</p>
+      <p data-testid="height">Your current Window height is {height}</p>
     </div>
   );
 }

@@ -19,7 +19,7 @@ const Toggle = ({ isChecked }: ToggleProps): JSX.Element => {
 
   return (
     <div>
-			<p data-testid="status">Checked: {JSON.stringify(checked)}</p>
+      <p data-testid="status">Checked: {JSON.stringify(checked)}</p>
       <input type="checkbox" checked={checked} onChange={setChecked}/>
     </div>
   );
