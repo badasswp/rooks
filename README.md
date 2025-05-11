@@ -6,11 +6,11 @@ A list of custom React hooks.
 >
 > These React hooks should be carefully reviewed & vetted before being used on a Production website.
 
-# useBlur
+## useBlur
 
 The `useBlur` hook is a custom React hook that helps you track when the user has clicked outside an element.
 
-## How To Use
+### How To Use
 
 ```js
 import type { JSX } from 'react';
