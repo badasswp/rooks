@@ -1,8 +1,9 @@
 import type { JSX } from 'react';
 
 import Blur from '../../hooks/useBlur/Blur';
-import Toggle from '../../hooks/useToggle/Toggle';
 import Previous from '../../hooks/usePrevious/Previous';
+import SelectedText from '../../hooks/useSelectedText/SelectedText';
+import Toggle from '../../hooks/useToggle/Toggle';
 import WindowSize from '../../hooks/useWindowSize/WindowSize';
 
 import './App.css';
@@ -22,7 +23,10 @@ const App = (): JSX.Element => {
       <Blur />
 
 			<h1>usePrevious</h1>
-			<Previous />
+      <Previous />
+
+			<h1>useSelectedText</h1>
+      <SelectedText />
 
 			<h1>useToggle</h1>
 			<Toggle isChecked={false} />
