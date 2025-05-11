@@ -5,11 +5,11 @@ The `useToggle` hook is a custom React hook that helps you manage a boolean stat
 ## How To Use
 
 ```js
-import React, { JSX } from 'react';
+import type { JSX } from 'react';
 import useToggle from './';
 
 interface ToggleProps {
-  isChecked: boolean;
+	isChecked: boolean;
 }
 
 /**
@@ -26,7 +26,7 @@ const Toggle = ({ isChecked }: ToggleProps): JSX.Element => {
 
   return (
     <div>
-      <p>Checked: {JSON.stringify(checked)}</p>
+			<p data-testid="status">Checked: {JSON.stringify(checked)}</p>
       <input type="checkbox" checked={checked} onChange={setChecked}/>
     </div>
   );

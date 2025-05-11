@@ -5,7 +5,8 @@ The `usePrevious` hook is a custom React hook that helps you track the previous 
 ## How To Use
 
 ```js
-import React, { useState, JSX } from 'react';
+import { useState } from 'react';
+import type { JSX } from 'react';
 import usePrevious from './';
 
 /**
@@ -22,8 +23,8 @@ const Previous = (): JSX.Element => {
 
   return (
     <div>
-      <p>Current: {count}</p>
-      <p>Previous: {prevCount}</p>
+      <p data-testid="current">Current: {count}</p>
+      <p data-testid="previous">Previous: {prevCount}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   );
