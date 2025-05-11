@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 
+import Blur from '../../hooks/useBlur/Blur';
 import Toggle from '../../hooks/useToggle/Toggle';
 import Previous from '../../hooks/usePrevious/Previous';
 import WindowSize from '../../hooks/useWindowSize/WindowSize';
@@ -17,6 +18,9 @@ import './App.css';
 const App = (): JSX.Element => {
   return (
 		<>
+			<h1>useBlur</h1>
+      <Blur />
+
 			<h1>usePrevious</h1>
 			<Previous />
 
