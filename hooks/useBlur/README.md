@@ -5,30 +5,31 @@ The `useBlur` hook is a custom React hook that helps you track when the user has
 ## How To Use
 
 ```js
-import { useState } from 'react';
 import type { JSX } from 'react';
-import usePrevious from './';
+import useBlur from './';
 
 /**
- * Previous component.
+ * Blur component.
  *
  * This component is used to demonstrate
- * the use of the usePrevious hook.
+ * the use of the useBlur hook.
  *
- * @returns {JSX.Element} The Previous component.
+ * @returns {JSX.Element} The Blur component.
  */
-const Previous = (): JSX.Element => {
-  const [count, setCount] = useState(0);
-  const prevCount = usePrevious(count);
+const Blur = (): JSX.Element => {
+  const handleBlur = () => {
+    console.log('Blur event has been triggered');
+  }
+
+  const [isBlurred, isBlurredRef] = useBlur(handleBlur);
 
   return (
-    <div>
-      <p data-testid="current">Current: {count}</p>
-      <p data-testid="previous">Previous: {prevCount}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
+    <>
+      <p>{JSON.stringify(isBlurred)}</p>
+      <div ref={isBlurredRef} style={{ height: 100, border: '1px solid #ccc' }} contentEditable/>
+    </>
   );
 }
 
-export default Previous;
+export default Blur;
 ```
