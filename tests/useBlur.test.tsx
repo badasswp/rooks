@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent, getByTestId, render } from '@testing-library/react';
+import { getByTestId, render } from '@testing-library/react';
 
 import Blur from '../hooks/useBlur/Blur';
 
