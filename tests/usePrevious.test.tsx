@@ -11,7 +11,7 @@ describe('<UsePrevious />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should retain the previous state from the usePrevious hook', () => {
+  it('should retain the previous state using the usePrevious hook', () => {
     const { container } = render(<Previous />);
 
     fireEvent.click(getByRole(container, 'button'));
