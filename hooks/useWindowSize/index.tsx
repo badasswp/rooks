@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 interface WindowSizeType {
-	width: number;
-	height: number;
+  width: number;
+  height: number;
 }
 
 /**
@@ -17,23 +17,23 @@ interface WindowSizeType {
  * @returns An object containing the current window width and height.
  */
 const useWindowSize = (): WindowSizeType => {
-	const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
-	/**
-	 * Resize event handler.
-	 *
-	 * This function updates the state with
-	 * the current window size.
-	 *
-	 * @returns void
-	 */
-	const handleResize = () => setSize({ width: window.innerWidth, height: window.innerHeight });
+  /**
+   * Resize event handler.
+   *
+   * This function updates the state with
+   * the current window size.
+   *
+   * @returns void
+   */
+  const handleResize = () => setSize({ width: window.innerWidth, height: window.innerHeight });
 
   useEffect(() => {
-		window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-	}, []);
+  }, []);
 
   return size;
 }
