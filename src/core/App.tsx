@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 
 import Blur from '../../hooks/useBlur/Blur';
+import MousePosition from '../../hooks/useMousePosition/MousePosition';
 import Previous from '../../hooks/usePrevious/Previous';
 import SelectedText from '../../hooks/useSelectedText/SelectedText';
 import Toggle from '../../hooks/useToggle/Toggle';
@@ -21,6 +22,9 @@ const App = (): JSX.Element => {
 		<>
 			<h1>useBlur</h1>
       <Blur />
+
+      <h1>useMousePosition</h1>
+      <MousePosition />
 
 			<h1>usePrevious</h1>
       <Previous />
