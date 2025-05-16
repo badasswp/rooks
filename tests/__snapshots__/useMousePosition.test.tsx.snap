@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UseMousePosition /> should render the component with no issues 1`] = `
+<div>
+  <div>
+    <p>
+      Try to resize your Window
+    </p>
+    <p
+      data-testid="pos-x"
+    >
+      Your current mouse position on the x-axis is 
+      0
+    </p>
+    <p
+      data-testid="pos-y"
+    >
+      Your current mouse position on the y-axis is 
+      0
+    </p>
+  </div>
+</div>
+`;
