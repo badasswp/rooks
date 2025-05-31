@@ -6,6 +6,16 @@ A list of custom React hooks.
 >
 > These React hooks should be carefully reviewed & vetted before being used on a Production website.
 
+## Hooks
+
+- [Hooks](#hooks)
+  - [useBlur](#useblur)
+  - [useMousePosition](#usemouseposition)
+  - [usePrevious](#useprevious)
+  - [useSelectedText](#useselectedtext)
+  - [useToggle](#usetoggle)
+  - [useWindowSize](#usewindowsize)
+
 ## useBlur
 
 The `useBlur` hook is a custom React hook that helps you track when the user has clicked outside an element.
