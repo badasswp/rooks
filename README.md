@@ -6,6 +6,14 @@ A list of custom React hooks.
 >
 > These React hooks should be carefully reviewed & vetted before being used on a Production website.
 
+## Getting Started
+
+Install via NPM like so:
+
+```bash
+npm install -g @badasswp/rooks
+```
+
 ## Hooks
 
 - [Hooks](#hooks)
@@ -23,9 +31,10 @@ The `useBlur` hook is a custom React hook that helps you track when the user has
 ### How To Use
 
 ```js
-import { useEffect } from 'react';
 import type { JSX } from 'react';
-import useBlur from './';
+import { useEffect } from 'react';
+
+import { useBlur } from '@badasswp/rooks';
 
 /**
  * Blur component.
@@ -67,7 +76,8 @@ The `useMousePosition` hook is a custom React hook that helps you get the mouse 
 
 ```js
 import type { JSX } from 'react';
-import useMousePosition from './';
+
+import { useMousePosition } from '@badasswp/rooks';
 
 /**
  * MousePosition component.
@@ -99,9 +109,10 @@ The `usePrevious` hook is a custom React hook that helps you track the previous 
 ### How To Use
 
 ```js
-import { useState } from 'react';
 import type { JSX } from 'react';
-import usePrevious from './';
+import { useState } from 'react';
+
+import { usePrevious } from '@badasswp/rooks';
 
 /**
  * Previous component.
@@ -135,7 +146,8 @@ The `useSelectedText` hook is a custom React hook that helps you track the selec
 
 ```js
 import type { JSX } from 'react';
-import useSelectedText from './';
+
+import { useSelectedText } from '@badasswp/rooks';
 
 /**
  * SelectedText component.
@@ -167,7 +179,8 @@ The `useToggle` hook is a custom React hook that helps you manage a boolean stat
 
 ```js
 import type { JSX } from 'react';
-import useToggle from './';
+
+import { useToggle } from '@badasswp/rooks';
 
 interface ToggleProps {
   isChecked: boolean;
@@ -204,7 +217,8 @@ The `useWindowSize` hook is a custom React hook that helps you get the current w
 
 ```js
 import type { JSX } from 'react';
-import useWindowSize from './';
+
+import { useWindowSize } from '@badasswp/rooks';
 
 /**
  * WindowSize component.
