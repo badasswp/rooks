@@ -1,10 +1,32 @@
 {
-  "name": "rooks",
-  "author": "badasswp",
+  "name": "@badasswp/rooks",
   "description": "A list of custom React hooks.",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
+  "author": {
+    "name": "badasswp",
+    "email": "badasswpdev@gmail.com",
+    "url": "https://github.com/badasswp"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/badasswp/rooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "badasswp"
+  ],
+  "files": [
+    "index.js",
+    "hooks"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
