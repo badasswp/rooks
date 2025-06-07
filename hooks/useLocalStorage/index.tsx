@@ -25,9 +25,9 @@ const useLocalStorage = (key: string): any => {
       }
 
       const item = e.key as string;
-      const currentItem = JSON.stringify(localStorage.getItem(item));
+      const current = JSON.stringify(localStorage.getItem(item));
 
-      setStorageItem(prev => (prev !== currentItem ? currentItem : prev));
+      setStorageItem(prev => (prev !== current ? current : prev));
     },
     [key]
   );
