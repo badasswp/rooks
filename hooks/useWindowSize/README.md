@@ -6,7 +6,8 @@ The `useWindowSize` hook is a custom React hook that helps you get the current w
 
 ```js
 import type { JSX } from 'react';
-import useWindowSize from './';
+
+import { useWindowSize } from '@badasswp/rooks';
 
 /**
  * WindowSize component.

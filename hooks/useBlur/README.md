@@ -7,7 +7,7 @@ The `useBlur` hook is a custom React hook that helps you track when the user has
 ```js
 import { useEffect } from 'react';
 import type { JSX } from 'react';
-import useBlur from './';
+import useBlur from '@badasswp/rooks';
 
 /**
  * Blur component.

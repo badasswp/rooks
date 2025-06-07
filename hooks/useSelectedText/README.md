@@ -6,7 +6,8 @@ The `useSelectedText` hook is a custom React hook that helps you track the selec
 
 ```js
 import type { JSX } from 'react';
-import useSelectedText from './';
+
+import { useSelectedText } from '@badasswp/rooks';
 
 /**
  * SelectedText component.

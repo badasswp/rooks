@@ -6,7 +6,8 @@ The `useToggle` hook is a custom React hook that helps you manage a boolean stat
 
 ```js
 import type { JSX } from 'react';
-import useToggle from './';
+
+import { useToggle } from '@badasswp/rooks';
 
 interface ToggleProps {
   isChecked: boolean;

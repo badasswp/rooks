@@ -6,7 +6,8 @@ The `useMousePosition` hook is a custom React hook that helps you get the mouse 
 
 ```js
 import type { JSX } from 'react';
-import useMousePosition from './';
+
+import { useMousePosition } from '@badasswp/rooks';
 
 /**
  * MousePosition component.

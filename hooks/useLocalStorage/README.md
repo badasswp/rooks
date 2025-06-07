@@ -6,7 +6,8 @@ The `useLocalStorage` hook is a custom React hook that helps you get the mouse p
 
 ```js
 import type { JSX } from 'react';
-import useLocalStorage from './';
+
+import { useLocalStorage } from '@badasswp/rooks';
 
 /**
  * LocalStorage component.

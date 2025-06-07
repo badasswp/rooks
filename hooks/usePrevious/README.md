@@ -7,7 +7,8 @@ The `usePrevious` hook is a custom React hook that helps you track the previous 
 ```js
 import { useState } from 'react';
 import type { JSX } from 'react';
-import usePrevious from './';
+
+import { usePrevious } from '@badasswp/rooks';
 
 /**
  * Previous component.
