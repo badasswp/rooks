@@ -1,6 +1,6 @@
 # useLocalStorage
 
-The `useLocalStorage` hook is a custom React hook that helps you get the mouse position on the window. It provides an object containing the x and y positions of the mouse.
+The `useLocalStorage` hook is a custom React hook that helps you get the localStorage items. If the item value mutates, it refreshes your component accordingly.
 
 ## How To Use
 
