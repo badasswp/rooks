@@ -6,7 +6,6 @@ index.html
 jest.config.cjs
 tsconfig.json
 vite.config.ts
-yarn.lock
 .github
 src
 tests
