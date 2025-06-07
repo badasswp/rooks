@@ -1,0 +1,12 @@
+.editorconfig
+.gitignore
+.prettierrc
+eslint.config.js
+index.html
+jest.config.cjs
+tsconfig.json
+vite.config.tsconfig
+yarn.lock
+.github
+src
+tests
