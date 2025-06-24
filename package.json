@@ -1,7 +1,7 @@
 {
   "name": "@badasswp/rooks",
   "description": "A list of custom React hooks.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": {
     "name": "badasswp",
