@@ -12,28 +12,38 @@ import { useEffect, useState, useCallback } from 'react';
 const useSelectedText = (targetRef?: React.RefObject<HTMLElement>): string => {
   const [selectedText, setSelectedText] = useState('');
 
+  /**
+   * Determines whether the current text selection
+   * is entirely within the target element.
+   *
+   * If the selection starts and ends within the target element;
+   * return `true`, otherwise, `false`.
+   *
+   * @returns {boolean}
+   */
   const isSelectionInTarget = useCallback((): boolean => {
     const selection = document.getSelection() as Selection | null;
 
-    if ( ! selection?.rangeCount || ! targetRef?.current ) {
+    if (!selection?.rangeCount || !targetRef?.current) {
       return false;
     }
 
-    const range: Range = selection.getRangeAt( 0 );
+    const range: Range = selection.getRangeAt(0);
 
     return (
-      targetRef.current.contains( range.startContainer ) &&
-      targetRef.current.contains( range.endContainer )
+      targetRef.current.contains(range.startContainer) &&
+      targetRef.current.contains(range.endContainer)
     );
   }, [targetRef]);
 
   /**
-   * On Selection.
+   * Handles text selection logic.
    *
-   * Get the selected text range and
-   * populate the state.
+   * Grabs the currently selected text and updates
+   * state based on whether the selection is within
+   * the target element.
    *
-   * @return {void}
+   * @returns {void}
    */
   const handleSelection = useCallback((): void => {
     const selectedString: string = document.getSelection()?.toString() || '';
@@ -55,6 +65,6 @@ const useSelectedText = (targetRef?: React.RefObject<HTMLElement>): string => {
   }, [handleSelection]);
 
   return selectedText;
-}
+};
 
 export default useSelectedText;
