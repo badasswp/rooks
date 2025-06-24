@@ -17,6 +17,15 @@ const useBlur = (): BlurType => {
   const [isBlurred, setIsBlurred] = useState(false);
 
   useEffect(() => {
+    /**
+     * Handles clicks outside the referenced element.
+     *
+     * If the click target is outside the element,
+     * update the blurred state.
+     *
+     * @param {MouseEvent} e - The mouse event triggered when the document is clicked.
+     * @returns {void}
+     */
     const handleClickOutside = (e: MouseEvent): void => {
       const el = ref.current;
       if (el && !el.contains(e.target as Node) && !isBlurred) {
@@ -24,6 +33,13 @@ const useBlur = (): BlurType => {
       }
     };
 
+    /**
+     * Handles the focusin event by checking
+     * if the focused element is within the referenced element.
+     *
+     * @param {FocusEvent} e - The focus event triggered when an element receives focus.
+     * @returns {void}
+     */
     const handleFocusIn = (e: FocusEvent): void => {
       const el = ref.current;
       if (el && el.contains(e.target as Node)) {
