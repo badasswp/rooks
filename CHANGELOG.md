@@ -1,7 +1,8 @@
 ## 1.0.1
 
-- Add LICENSE to package.
-- Add CHANGELOG.md to package.
+- Docs: Add LICENSE to package.
+- Docs: Add CHANGELOG.md to package.
+- Docs: Add missing doc blocks.
 
 ## 1.0.0 (Initial Release)
 

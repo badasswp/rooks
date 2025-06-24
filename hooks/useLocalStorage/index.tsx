@@ -18,6 +18,17 @@ const useLocalStorage = (key: string): any => {
     JSON.stringify(localStorage.getItem(key))
   );
 
+  /**
+   * Handles the `storage` event triggered when a
+   * change is made to localStorage.
+   *
+   * If the changed key matches the specified key,
+   * update the stored item state only if the value has
+   * actually changed.
+   *
+   * @param {StorageEvent} e - The storage event triggered by changes to localStorage.
+   * @returns {void}
+   */
   const handleSetItemChange = useCallback(
     (e: StorageEvent) => {
       if (e.key !== key) {
